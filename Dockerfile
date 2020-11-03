@@ -16,7 +16,7 @@ ENV PGID=1000
 ENV CADDYPATH=/app
 ENV RCLONE_CONFIG=/app/conf/rclone.conf
 
-ADD aria2c.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
+ADD . /app/
 ADD conf /app/conf
 ADD Caddyfile SecureCaddyfile /usr/local/caddy/
 
