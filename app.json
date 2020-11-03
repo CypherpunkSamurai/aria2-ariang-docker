@@ -12,13 +12,13 @@
 			"description": "Aria2c's secret",
 			"value": "1234"
 		},
-                {
+                
                  "ARIA2_EXTERNAL_PORT" : {
                          "description": "Aria2 External port to connect",
                          "required": true,
                          "value" : "443"
                 },
-                {
+                
 		"ENABLE_AUTH": {
 			"description": "Enable Aria2 Auth. Default True",
 			"required": true,
