@@ -18,6 +18,7 @@
                          "required": true,
                          "value" : "443"
                 },
+                {
 		"ENABLE_AUTH": {
 			"description": "Enable Aria2 Auth. Default True",
 			"required": true,
