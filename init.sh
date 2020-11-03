@@ -13,7 +13,6 @@ if [[ -n $RCLONE_CONFIG && -n $RCLONE_DEST_FOLDER ]]; then
 	echo "on-download-stop=./on-stop.sh" >> aria2c.conf
 	chmod +x on-complete.sh
 	chmod +x on-stop.sh
-	chmod +x unpack.sh
 fi
 
 
