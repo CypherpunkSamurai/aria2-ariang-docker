@@ -8,11 +8,11 @@ echo Setting up rclone config
 
 if [[ -n $RCLONE_CONFIG && -n $RCLONE_DEST_FOLDER ]]; then
 	echo "Rclone config detected"
-	echo -e "$RCLONE_CONFIG" > rclone.conf
-	echo "on-download-complete=./on-complete.sh" >> aria2c.conf
-	echo "on-download-stop=./on-stop.sh" >> aria2c.conf
-	chmod +x on-complete.sh
-	chmod +x on-stop.sh
+	echo -e "$RCLONE_CONFIG" > /app/conf/rclone.conf
+	echo "on-download-complete=/app/on-complete.sh" >> /app/conf/aria2c.conf
+	echo "on-download-stop=/app/on-stop.sh" >> /app/conf/aria2c.conf
+	chmod +x /app/on-complete.sh
+	chmod +x /app/on-stop.sh
 fi
 
 
