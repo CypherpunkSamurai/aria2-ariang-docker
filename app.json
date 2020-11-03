@@ -4,32 +4,47 @@
 	"repository": "https://github.com/CypherpunkSamurai/aria2-ariang-docker/",
 	"keywords": ["AriaNG"],
 	"env": {
-		"HEROKU_APP_NAME": {
+		"DOMAIN": {
 			"description": "This should be the same as \"App name\" above.",
 			"value": ""
 		},
-		"ARIA2C_SECRET": {
+		"RPC_SECRET": {
 			"description": "Aria2c's secret",
+			"value": "1234"
+		},
+                {
+                 "ARIA2_EXTERNAL_PORT" : {
+                         "description": "Aria2 External port to connect",
+                         "required": true,
+                         "value" : "443"
+                },
+		"ENABLE_AUTH": {
+			"description": "Enable Aria2 Auth. Default True",
+			"required": true,
+                        "value": false
+		},
+                 "RCLONE_CONFIG": {
+			"description": "Rclone config. Replace newline with \\n",
+			"required": true,
 			"value": ""
 		},
-		"RCLONE_CONFIG": {
-			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
-			"required": false
-		},
-		"RCLONE_DESTINATION": {
+                 "RCLONE_DEST_FOLDER": {
 			"description": "Rclone destination path, format \"[drivename A]:[remove path A]\"",
-			"required": false,
-			"value": "Google:tmp"
+			"required": true,
+			"value": "Google:RCloneUploads"
 		},
-		"RCLONE_DESTINATION_2": {
-			"description": "If you mount a second cloud drive, then fill in \"[drivename B]:[remove path B]\"",
+		"ARIA2_SSL": {
+			"description": "Use SSL for aria2 connection",
 			"required": false,
-			"value": "OneDrive:tmp"
+			"value": false
 		},
-		"UNPACK_PASSWORDS": {
-			"description": "unpack passwords in one line, replace line breaks with \"\\n\"",
-			"required": false,
-			"value": ""
+		"ARIA2_USER": {
+			"description": "Aria2 Login username (if auth enabled)",
+			"value": "user"
+		},
+		"ARIA2_PWD": {
+			"description": "Aria2 Login password (if auth enabled)",
+			"value": "password"
 		}
 	},
 	"buildpacks": [
